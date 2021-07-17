@@ -10,12 +10,14 @@ public class Move : MonoBehaviour
 [SerializeField] private TimeDilation _timeDilation;
 private float _currentEnergy;
 public bool _isAlive { private get; set; }
+private bool _normalTime;
 
     private void Start ()
     {
         Time.timeScale = 1f;
         _currentEnergy = _energyBar._maxEnergy;
         _isAlive = true;
+        _normalTime = false;
     }
 
     private void Update()
@@ -28,12 +30,18 @@ public bool _isAlive { private get; set; }
             {
                 _timeDilation.TimeDil();
                 _currentEnergy = _energyBar.SetEnergy(_currentEnergy);
+                _normalTime = false;
             }
 
-            else
+            else if (_normalTime == false)
+            {
+                _timeDilation.NormalTime();
+                _normalTime = true;
+            }
+
+            if (_currentEnergy < 1)
             {
                 _currentEnergy = _energyBar.EnergyRecovery(_currentEnergy);
-                _timeDilation.NormalTime();
             }
 
             if (Input.touchCount > 0)
