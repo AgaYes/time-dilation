@@ -24,7 +24,7 @@ private bool _normalTime;
     {
         if (_isAlive == true)
         {
-            //transform.Translate(0, 0, _speed * Time.deltaTime);
+            transform.Translate(0, 0, _speed * Time.deltaTime);
 
             if (Input.GetMouseButton(0) && _currentEnergy > 0)
             {
