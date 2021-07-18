@@ -7,6 +7,7 @@ public class Collisions : MonoBehaviour
 
 [SerializeField] private Ui _ui;
 [SerializeField] private Move _move;
+[SerializeField] private RegDoll _regDoll;
 private Rigidbody _rb;
 
     private void Start ()
@@ -19,6 +20,7 @@ private Rigidbody _rb;
         if (col.gameObject.tag == "enemy")
         {
             Dead ();
+            _regDoll.Active();
         }
 
         if (col.gameObject.tag == "Finish")

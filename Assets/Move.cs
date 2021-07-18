@@ -39,7 +39,7 @@ private bool _normalTime;
                 _normalTime = true;
             }
 
-            if (_currentEnergy < 1)
+            if (_currentEnergy < 1 && !Input.GetMouseButton(0))
             {
                 _currentEnergy = _energyBar.EnergyRecovery(_currentEnergy);
             }
