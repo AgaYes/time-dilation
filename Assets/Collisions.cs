@@ -31,7 +31,7 @@ private Rigidbody _rb;
 
     private void Dead ()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         _ui.DeadDisplay();
         _move._isAlive = false;
     }

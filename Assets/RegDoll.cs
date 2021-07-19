@@ -4,12 +4,14 @@
 public class RegDoll : MonoBehaviour
 {
     [SerializeField] private Rigidbody[] _allRigidBody;
+    private Rigidbody _thisRihidaBody;
     private Animator _animator;
     private Move _movePlayer;
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         _movePlayer = GetComponent<Move>();
+        _thisRihidaBody = GetComponent<Rigidbody>();
 
         IsKinimatic(true);
     }
@@ -28,6 +30,7 @@ public class RegDoll : MonoBehaviour
         {
             _allRigidBody[i].isKinematic = state;
         }
+        _thisRihidaBody.isKinematic = !state;
         _animator.enabled = state;
         _movePlayer.enabled = state;
     }
