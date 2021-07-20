@@ -14,11 +14,7 @@ public class Ui : MonoBehaviour
 
     public void WinDisplay () => StartDisplay(_winDisplay);
 
-    public void PauseDisplay ()
-    {
-        StartDisplay(_pauseDisplay);
-        Time.timeScale = 0;
-    } 
+    public void PauseDisplay () => StartDisplay(_pauseDisplay);
 
     private void StartDisplay (params GameObject[] display)
     {
@@ -47,7 +43,6 @@ public class Ui : MonoBehaviour
 
     public void Continue ()
     {
-        Time.timeScale = 1;
         _pauseDisplay.SetActive(false);
     }
 }

@@ -25,20 +25,18 @@ private Rigidbody _rb;
 
         if (col.gameObject.tag == "Finish")
         {
-
+            _ui.WinDisplay();
         }
     }
 
     private void Dead ()
     {
-        //Time.timeScale = 0f;
         _ui.DeadDisplay();
         _move._isAlive = false;
     }
 
     private void Win ()
     {
-        Time.timeScale = 0f;
         _ui.WinDisplay();
     }
 }

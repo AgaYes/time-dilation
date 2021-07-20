@@ -757,7 +757,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000000071305415, y: 0.0067434628, z: -0.000000006503296}
+  m_ConnectedAnchor: {x: 0.0000000071305415, y: 0.0067434628, z: -0.0000000065032966}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2293,7 +2293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 748894650}
-  _maxEnergy: 1
   _wasteEnergy: 0.002
   _getEnergy: 0.003
 --- !u!114 &748894650
@@ -2423,7 +2422,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 760310783}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2782,7 +2781,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000004081243, y: 0.00674346, z: -0.000000008129945}
+  m_ConnectedAnchor: {x: -0.000000004081243, y: 0.00674346, z: -0.000000008129944}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3490,7 +3489,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495815432}
-  m_LocalRotation: {x: 0.055887606, y: -0.9132262, z: 0.13407016, w: 0.3806834}
+  m_LocalRotation: {x: 0.049751934, y: -0.9295458, z: 0.13646603, w: 0.33889}
   m_LocalPosition: {x: 22.07, y: 4.6199994, z: 27.02}
   m_LocalScale: {x: 0.50000024, y: 0.50000006, z: 0.5000002}
   m_Children: []
@@ -3700,7 +3699,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516516359}
-  m_LocalRotation: {x: 0.055887606, y: -0.9132262, z: 0.13407016, w: 0.3806834}
+  m_LocalRotation: {x: 0.049751934, y: -0.9295458, z: 0.13646603, w: 0.33889}
   m_LocalPosition: {x: 22.07, y: 4.6199994, z: 27.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
