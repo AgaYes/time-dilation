@@ -47,6 +47,7 @@ private Rigidbody _rb;
         _ui.DeadDisplay();
         //_sounds.HitSound();
         _regDoll.Active();
+        Debug.Log("sfd");
     }
 
     private void Win ()
@@ -57,7 +58,6 @@ private Rigidbody _rb;
 
     private void Boat (GameObject boat)
     {
-        float speed = 5f;
         this.transform.SetParent(boat.transform);
         boat.GetComponent<BoatMove>().enabled = true;
         _regDoll.Active();
