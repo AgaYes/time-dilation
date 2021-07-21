@@ -7,11 +7,13 @@ public class Hamer : MonoBehaviour
 
 [SerializeField] private float _speedDilation;
 [SerializeField] private float _speedNormal;
+private AudioSource _hammerSounds;
 private float _speed;
 private float _target;
 
-    private void Start ()
+    private void Awake ()
     {
+        _hammerSounds = GetComponent<AudioSource>();
         _target = 90;
     }
 
@@ -27,16 +29,19 @@ private float _target;
         else if (transform.eulerAngles.z <= 1)
         {
             _target = 90;
+            _hammerSounds.Play();
         }
     }
 
     public void DilationSpeed ()
     {
         _speed = _speedDilation;
+        _hammerSounds.pitch = 0.5f;
     }
 
     public void NormalSpeed ()
     {
         _speed = _speedNormal;
+        _hammerSounds.pitch = 1f;
     }
 }

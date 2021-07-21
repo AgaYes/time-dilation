@@ -32,6 +32,6 @@ public class RegDoll : MonoBehaviour
         }
         _thisRihidaBody.isKinematic = !state;
         _animator.enabled = state;
-        _movePlayer.enabled = state;
+        _movePlayer._isAlive = state;
     }
 }

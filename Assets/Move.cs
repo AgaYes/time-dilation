@@ -8,16 +8,17 @@ public class Move : MonoBehaviour
 [SerializeField] private float _speed;
 [SerializeField] private EnergyBar _energyBar;
 [SerializeField] private TimeDilation _timeDilation;
+[SerializeField] private Sounds _sounds;
 private float _currentEnergy;
 public bool _isAlive { private get; set; }
 private bool _normalTime;
 
     private void Start ()
     {
-        Time.timeScale = 1f;
         _currentEnergy = _energyBar._maxEnergy;
         _isAlive = true;
-        _normalTime = false;
+        _normalTime = true;
+        _timeDilation.NormalTime();
     }
 
     private void Update()
@@ -28,13 +29,19 @@ private bool _normalTime;
 
             if (Input.GetMouseButton(0) && _currentEnergy > 0)
             {
-                _timeDilation.TimeDil();
+                if (_normalTime == true)
+                {
+                    _sounds.DelationSound();
+                    _timeDilation.TimeDil();
+                }
+
                 _currentEnergy = _energyBar.SetEnergy(_currentEnergy);
                 _normalTime = false;
             }
 
             else if (_normalTime == false)
             {
+                _sounds.NormalTimeSound();
                 _timeDilation.NormalTime();
                 _normalTime = true;
             }
@@ -55,11 +62,9 @@ private bool _normalTime;
                 }
             }
 
-            /*else
-            {
-                _currentEnergy = _energyBar.EnergyRecovery(_currentEnergy);
-                _timeDilation.NormalTime();
-            } */
         }
+
+        else
+            _timeDilation.NormalTime();
     }
 }

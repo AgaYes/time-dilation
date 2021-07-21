@@ -7,12 +7,14 @@ public class RotateObjects : MonoBehaviour
 
 [SerializeField] private float _speedDilation;
 [SerializeField] private float _speedNormal;
+private AudioSource _soundRotate;
 private float _speed;
 
-    private void Start ()
+    private void Awake ()
     {
         _speed = _speedNormal;
-    
+        _soundRotate = GetComponent<AudioSource>();
+        _soundRotate.Play();
     }
 
     private void Update()
@@ -23,10 +25,12 @@ private float _speed;
     public void DilationSpeed ()
     {
         _speed = _speedDilation;
+        _soundRotate.pitch = 0.5f;
     }
 
     public void NormalSpeed ()
     {
         _speed = _speedNormal;
+        _soundRotate.pitch = 1f;
     }
 }
