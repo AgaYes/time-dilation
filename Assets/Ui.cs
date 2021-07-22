@@ -9,12 +9,18 @@ public class Ui : MonoBehaviour
 [SerializeField] private GameObject _deadDisplay;
 [SerializeField] private GameObject _winDisplay;
 [SerializeField] private GameObject _pauseDisplay;
+[SerializeField] private Animator _timeDisplay;
 
     public void DeadDisplay () => StartDisplay(_deadDisplay);
 
     public void WinDisplay () => StartDisplay(_winDisplay);
 
     public void PauseDisplay () => StartDisplay(_pauseDisplay);
+    public void TimeScreen(string animation) 
+    {
+        _timeDisplay.SetTrigger(animation);
+            
+    }
 
     private void StartDisplay (params GameObject[] display)
     {

@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using Cinemachine;
 
 [RequireComponent(typeof(Move))]
 public class RegDoll : MonoBehaviour
 {
     [SerializeField] private Rigidbody[] _allRigidBody;
+
     private Rigidbody _thisRihidaBody;
     private Animator _animator;
     private Move _movePlayer;

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterBoat
+  m_Name: WaterBoat 1
   m_Shader: {fileID: 4800000, guid: fb270c1e5be780e46b05d4a023cd7e73, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -88,7 +88,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BorderColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.80300003, g: 0.6132, b: 0, a: 1}
+    - _Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
     - _DistTiling: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MoveDirection: {r: 0, g: 0, b: 0, a: 0}

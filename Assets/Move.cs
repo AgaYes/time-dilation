@@ -6,6 +6,7 @@ public class Move : MonoBehaviour
 {
 
 [SerializeField] private float _speed;
+[SerializeField] private Ui _ui;
 [SerializeField] private EnergyBar _energyBar;
 [SerializeField] private TimeDilation _timeDilation;
 [SerializeField] private Sounds _sounds;
@@ -31,6 +32,7 @@ private bool _normalTime;
             {
                 if (_normalTime == true)
                 {
+                    _ui.TimeScreen("slow");
                     _sounds.DelationSound();
                     _timeDilation.TimeDil();
                 }
@@ -41,6 +43,7 @@ private bool _normalTime;
 
             else if (_normalTime == false)
             {
+                _ui.TimeScreen("normal");
                 _sounds.NormalTimeSound();
                 _timeDilation.NormalTime();
                 _normalTime = true;

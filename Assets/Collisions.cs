@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,11 @@ using UnityEngine;
 public class Collisions : MonoBehaviour
 {
 
-[SerializeField] private Ui _ui;
-[SerializeField] private Move _move;
-[SerializeField] private RegDoll _regDoll;
-[SerializeField] private Sounds _sounds;
+    [SerializeField] private Ui _ui;
+    [SerializeField] private Move _move;
+    [SerializeField] private RegDoll _regDoll;
+    [SerializeField] private CinemachineBrain _brainCamera;
+    [SerializeField] private Sounds _sounds;
 private Rigidbody _rb;
 
     private void Start ()
@@ -58,6 +60,8 @@ private Rigidbody _rb;
 
     private void Boat (GameObject boat)
     {
+        if(_brainCamera?.enabled == true)
+            _brainCamera.enabled = false;
         this.transform.SetParent(boat.transform);
         boat.GetComponent<BoatMove>().enabled = true;
         _regDoll.Active();
