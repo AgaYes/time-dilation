@@ -6,17 +6,11 @@ using UnityEngine;
 public class Collisions : MonoBehaviour
 {
 
-    [SerializeField] private Ui _ui;
-    [SerializeField] private Move _move;
-    [SerializeField] private RegDoll _regDoll;
-    [SerializeField] private CinemachineBrain _brainCamera;
-    [SerializeField] private Sounds _sounds;
-private Rigidbody _rb;
-
-    private void Start ()
-    {
-        _rb = GetComponent<Rigidbody>();
-    }
+[SerializeField] private Ui _ui;
+[SerializeField] private Move _move;
+[SerializeField] private RegDoll _regDoll;
+[SerializeField] private Sounds _sounds;
+[SerializeField] private CinemachineBrain _camera;
 
     private void OnCollisionEnter(Collision col)
     {
@@ -27,7 +21,7 @@ private Rigidbody _rb;
 
         if (col.gameObject.tag == "Finish")
         {
-            _ui.WinDisplay();
+            Win();
         }
 
         if (col.gameObject.tag == "Boat")
@@ -47,7 +41,7 @@ private Rigidbody _rb;
     private void Dead ()
     {
         _ui.DeadDisplay();
-        //_sounds.HitSound();
+        _sounds.HitSound();
         _regDoll.Active();
         Debug.Log("sfd");
     }
@@ -56,12 +50,11 @@ private Rigidbody _rb;
     {
         _ui.WinDisplay();
         _sounds.WinSound();
+        _camera.enabled = false;
     }
 
     private void Boat (GameObject boat)
     {
-        if(_brainCamera?.enabled == true)
-            _brainCamera.enabled = false;
         this.transform.SetParent(boat.transform);
         boat.GetComponent<BoatMove>().enabled = true;
         _regDoll.Active();

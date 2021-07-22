@@ -33,7 +33,8 @@ private bool _normalTime;
                 if (_normalTime == true)
                 {
                     _ui.TimeScreen("slow");
-                    _sounds.DelationSound();
+                    _sounds.DelationSound(true);
+                    _sounds.NormalTimeSound(false);
                     _timeDilation.TimeDil();
                 }
 
@@ -44,7 +45,8 @@ private bool _normalTime;
             else if (_normalTime == false)
             {
                 _ui.TimeScreen("normal");
-                _sounds.NormalTimeSound();
+                _sounds.DelationSound(false);
+                _sounds.NormalTimeSound(true);
                 _timeDilation.NormalTime();
                 _normalTime = true;
             }
@@ -68,6 +70,9 @@ private bool _normalTime;
         }
 
         else
+        {
+            _sounds.DelationSound(false);
             _timeDilation.NormalTime();
+        }
     }
 }

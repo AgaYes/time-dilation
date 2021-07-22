@@ -760,7 +760,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3e1268b2d3f22c94aa742b389cf8884e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bc5f8d7f025502b4ca50b027e0525e8f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1110,7 +1110,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000000071305415, y: 0.0067434628, z: -0.000000006503296}
+  m_ConnectedAnchor: {x: 0.0000000071305415, y: 0.0067434628, z: -0.0000000065032966}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1209,23 +1209,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.012197304, y: 0.009976642, z: 0.008876074}
   m_Center: {x: 0.00051912246, y: 0.0033208835, z: -0.000861024}
---- !u!114 &305439312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305439308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c751048248c9c354e967231890c5eb82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ui: {fileID: 587522439}
-  _move: {fileID: 528699457}
-  _regDoll: {fileID: 528699454}
-  _brainCamera: {fileID: 0}
-  _sounds: {fileID: 0}
 --- !u!1 &339196378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,8 +1546,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467915335}
-  - component: {fileID: 467915334}
   - component: {fileID: 467915336}
+  - component: {fileID: 467915334}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -1581,11 +1564,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 467915333}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbadae243896e614d8ea82dc3db94b4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 23b4ac4407ab9894d9dbf9769210ad2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speedDilation: 50
   _speedNormal: 200
+  _timeWaitDilation: 1.5
+  _timeWaitNormal: 0.5
 --- !u!4 &467915335
 Transform:
   m_ObjectHideFlags: 0
@@ -1611,7 +1596,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b13e261e30ecded48896f5fea3ba2fd6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 05020bc4aa9cf1e449a8d0dae9a52ab8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1825,8 +1810,8 @@ MonoBehaviour:
   _ui: {fileID: 587522439}
   _move: {fileID: 528699457}
   _regDoll: {fileID: 528699454}
-  _brainCamera: {fileID: 1495815436}
   _sounds: {fileID: 1743234244}
+  _camera: {fileID: 1495815436}
 --- !u!1 &566750230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,7 +3403,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000004081243, y: 0.00674346, z: -0.000000008129945}
+  m_ConnectedAnchor: {x: -0.000000004081243, y: 0.00674346, z: -0.000000008129944}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -4387,7 +4372,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495815432}
-  m_LocalRotation: {x: 0.055887844, y: -0.91322535, z: 0.13407008, w: 0.38068518}
+  m_LocalRotation: {x: 0.050791666, y: -0.9269331, z: 0.13608247, w: 0.34597242}
   m_LocalPosition: {x: 22.07, y: 4.6199994, z: 35.69544}
   m_LocalScale: {x: 0.50000024, y: 0.50000006, z: 0.5000002}
   m_Children: []
@@ -4597,7 +4582,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516516359}
-  m_LocalRotation: {x: 0.055887844, y: -0.91322535, z: 0.13407008, w: 0.38068518}
+  m_LocalRotation: {x: 0.050791666, y: -0.9269331, z: 0.13608247, w: 0.34597242}
   m_LocalPosition: {x: 22.07, y: 4.6199994, z: 35.69544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5754,11 +5739,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06363a6e8d8aa344f87ddd2c0bcf6f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fanSound: {fileID: 118837122}
   _hitSound: {fileID: 1546324402}
+  _clipHit: {fileID: 8300000, guid: a742a2f94bea3b249b547c7ae2c5fb53, type: 3}
   _winSound: {fileID: 349896028}
+  _clipWin: {fileID: 8300000, guid: 99c1f69d38897d24cacc1010282a60a7, type: 3}
   _dilationSound: {fileID: 257819486}
-  _clipDilation: {fileID: 8300000, guid: 3e1268b2d3f22c94aa742b389cf8884e, type: 3}
+  _clipDilation: {fileID: 8300000, guid: bc5f8d7f025502b4ca50b027e0525e8f, type: 3}
   _normalTimeSound: {fileID: 1768263864}
   _clipNormalTime: {fileID: 8300000, guid: da35159e0664e51468d25290f7ae842f, type: 3}
 --- !u!4 &1743234245
@@ -6354,6 +6340,16 @@ PrefabInstance:
       propertyPath: _sounds
       value: 
       objectReference: {fileID: 1743234244}
+    - target: {fileID: 459384278450841150, guid: af2c7ed495e916448a92e9f9fff3279b,
+        type: 3}
+      propertyPath: _speedNormal
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 459384278450841150, guid: af2c7ed495e916448a92e9f9fff3279b,
+        type: 3}
+      propertyPath: _speedDilation
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 459384278450841151, guid: af2c7ed495e916448a92e9f9fff3279b,
         type: 3}
       propertyPath: m_Name
@@ -7519,6 +7515,16 @@ PrefabInstance:
       propertyPath: _sounds
       value: 
       objectReference: {fileID: 1743234244}
+    - target: {fileID: 459384278450841150, guid: af2c7ed495e916448a92e9f9fff3279b,
+        type: 3}
+      propertyPath: _speedNormal
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 459384278450841150, guid: af2c7ed495e916448a92e9f9fff3279b,
+        type: 3}
+      propertyPath: _speedDilation
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 459384278450841151, guid: af2c7ed495e916448a92e9f9fff3279b,
         type: 3}
       propertyPath: m_Name

@@ -9,6 +9,7 @@ private List <MoveObjects> _moveObjects = new List<MoveObjects>();
 private List <RotateObjects> _rotateObjects = new List<RotateObjects>();
 private List <Press> _press = new List<Press>();
 private List <Hamer> _hammer = new List<Hamer>();
+private List <Fan> _fan = new List<Fan>();
 
     private void Start ()
     {
@@ -23,6 +24,9 @@ private List <Hamer> _hammer = new List<Hamer>();
 
         var hammerObjects = FindObjectsOfType<Hamer>();
         _hammer.AddRange(hammerObjects);
+
+        var fanObjects = FindObjectsOfType<Fan>();
+        _fan.AddRange(fanObjects);
     }
 
     public void TimeDil ()
@@ -46,6 +50,11 @@ private List <Hamer> _hammer = new List<Hamer>();
         {
             _hammer[i].DilationSpeed();
         }
+
+        for (int i = 0; i < _fan.Count; i++)
+        {
+            _fan[i].DilationSpeed();
+        }
     }
 
     public void NormalTime ()
@@ -68,6 +77,11 @@ private List <Hamer> _hammer = new List<Hamer>();
         for (int i = 0; i < _hammer.Count; i++)
         {
             _hammer[i].NormalSpeed();
+        }
+
+         for (int i = 0; i < _fan.Count; i++)
+        {
+            _fan[i].NormalSpeed();
         }
     }
 }
