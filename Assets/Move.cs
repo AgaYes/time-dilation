@@ -28,7 +28,7 @@ private bool _normalTime;
         {
             transform.Translate(0, 0, _speed * Time.deltaTime);
 
-            if (Input.GetMouseButton(0) && _currentEnergy > 0)
+            if (Input.touchCount > 0 && _currentEnergy > 0 || Input.GetMouseButton(0) && _currentEnergy > 0)
             {
                 if (_normalTime == true)
                 {
@@ -37,9 +37,9 @@ private bool _normalTime;
                     _sounds.NormalTimeSound(false);
                     _timeDilation.TimeDil();
                 }
-
+                
                 _currentEnergy = _energyBar.SetEnergy(_currentEnergy);
-                _normalTime = false;
+                _normalTime = false;   
             }
 
             else if (_normalTime == false)
@@ -54,17 +54,6 @@ private bool _normalTime;
             if (_currentEnergy < 1 && !Input.GetMouseButton(0))
             {
                 _currentEnergy = _energyBar.EnergyRecovery(_currentEnergy);
-            }
-
-            if (Input.touchCount > 0)
-            {
-                Touch touch = Input.GetTouch(0);
-
-                if (touch.phase == TouchPhase.Began && _currentEnergy > 0)
-                {
-                    _timeDilation.TimeDil();
-                    _currentEnergy = _energyBar.SetEnergy(_currentEnergy);
-                }
             }
 
         }
