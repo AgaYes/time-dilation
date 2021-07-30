@@ -33,7 +33,7 @@ public class Ui : MonoBehaviour
     public void NextLevel ()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentScene++);
+        SceneManager.LoadScene(++currentScene);
     }
 
     public void Restart ()
